@@ -1,0 +1,3 @@
+[submodule "cyber4dev-binda-api"]
+	path = cyber4dev-binda-api
+	url = git@gitlab.com:cyber4EDU/cyber4dev-binda-api.git
