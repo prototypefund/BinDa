@@ -7,7 +7,7 @@ services:
       - binda_db1_data:/var/lib/postgresql/data
     command: -c ssl=off
     restart: unless-stopped
-    container_name: bin-da_db_kc
+    container_name: binda_db_kc
     env_file:
       - ./keycloak/postgres-keycloak.env
     networks:
@@ -19,7 +19,7 @@ services:
       - binda_db2_data:/var/lib/postgresql/data
     command: -c ssl=off
     restart: unless-stopped
-    container_name: bin-da_db_api
+    container_name: binda_db_api
     env_file:
       - ./keycloak/postgres-api.env
     networks:
@@ -32,7 +32,7 @@ services:
     depends_on:
       - db1
     image: quay.io/keycloak/keycloak:21.1
-    container_name: bin-da_kc
+    container_name: binda_kc
     volumes:
     # You can import keycloak themes
     #  - "./keycloak/themes/my-incredible-theme/:/opt/keycloak/themes/my-incredible-theme/"
@@ -82,8 +82,8 @@ services:
       start_period: 20s
 
   api:
-    image:  bin-da-api:latest
-    container_name: bin-da_api
+    image:  binda_api:latest
+    container_name: binda_api
     depends_on:
       - kc
     restart: unless-stopped
