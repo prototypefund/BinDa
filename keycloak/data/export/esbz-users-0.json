@@ -21,6 +21,9 @@
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
     "realmRoles" : [ "default-roles-esbz" ],
+    "clientRoles" : {
+      "binda-ui_access" : [ "binda_teacher" ]
+    },
     "notBefore" : 0,
     "groups" : [ ]
   } ]
