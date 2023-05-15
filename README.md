@@ -4,14 +4,16 @@
 
 ```shell
 cd cyber4dev-binda-api
-docker build -t bin-da-api:latest .
+docker build -t binda_api:latest .
 cd ..
-docker-compose -up 
+docker-compose up -d
 ```
 
 ## Local URLs
 
-* Keycloak
+* Keycloak 
+  * Admin User: admin : admin
+  * Test User: testuser1 : testuser1 
   * http://127.0.0.1:8282
   * OIDC Config
     * http://127.0.0.1:8282/realms/esbz/.well-known/openid-configuration
