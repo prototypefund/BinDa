@@ -1,0 +1,30 @@
+{
+  "realm" : "esbz",
+  "users" : [ {
+    "id" : "d26a3222-3c06-4d75-9f01-9b1c2a3d9e4f",
+    "createdTimestamp" : 1676065230763,
+    "username" : "testuser001",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "Test",
+    "lastName" : "User001",
+    "email" : "testuser001@sus.esbz.berlin",
+    "credentials" : [ {
+      "id" : "e9fcd4c0-a1aa-4414-8672-4e8cb1e517f2",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1676104180416,
+      "secretData" : "{\"value\":\"u0t7/a6Cq4qdTkzQD69qxk9q8Fb3YBV8pLKueYwv5nMFkRs3iI6lFKxZq7MHaxuQCY1HdMQKpRqEd98yLOIl8Q==\",\"salt\":\"ZH5E2SGBsauXRZ8vU6ANDw==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-esbz" ],
+    "clientRoles" : {
+      "binda-ui_access" : [ "binda_teacher" ]
+    },
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}
