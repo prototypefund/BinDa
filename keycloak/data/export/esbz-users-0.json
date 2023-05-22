@@ -1,6 +1,29 @@
 {
   "realm" : "esbz",
   "users" : [ {
+    "id" : "331dac72-9e2e-4677-a3fb-8cca168642be",
+    "createdTimestamp" : 1684748062631,
+    "username" : "testteacher01",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "",
+    "lastName" : "",
+    "email" : "testteacher01@sus.esbz.berlin",
+    "credentials" : [ {
+      "id" : "3cbc8821-e11b-4869-b143-520b552b2acd",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1684748094836,
+      "secretData" : "{\"value\":\"FQCKsz+E7mKtg/d4LxObpPxptFNNwrOS/eLjaYN7Ifg=\",\"salt\":\"QIAa4sebw7/jUrE00+XMdQ==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "role_esbz_team_teamv4", "role_esbz_team_teamv4_teacher", "default-roles-esbz" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
     "id" : "d26a3222-3c06-4d75-9f01-9b1c2a3d9e4f",
     "createdTimestamp" : 1676065230763,
     "username" : "testuser001",
