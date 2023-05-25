@@ -47,6 +47,22 @@
   "failureFactor" : 30,
   "roles" : {
     "realm" : [ {
+      "id" : "e767568a-4f2c-4be6-874c-ddd008c0e029",
+      "name" : "role_esbz_team_teamv4",
+      "description" : "",
+      "composite" : false,
+      "clientRole" : false,
+      "containerId" : "esbz",
+      "attributes" : { }
+    }, {
+      "id" : "b65df32f-dd1e-4481-bb74-09bdf7b69a59",
+      "name" : "role_esbz_team_teamv4_teacher",
+      "description" : "",
+      "composite" : false,
+      "clientRole" : false,
+      "containerId" : "esbz",
+      "attributes" : { }
+    }, {
       "id" : "8d0f6cbf-7251-4a0d-b6f2-47372435072b",
       "name" : "offline_access",
       "description" : "${role_offline-access}",
@@ -73,6 +89,14 @@
           "account" : [ "view-profile", "manage-account" ]
         }
       },
+      "clientRole" : false,
+      "containerId" : "esbz",
+      "attributes" : { }
+    }, {
+      "id" : "05dfd8cf-525f-40e3-80cb-c351506d2bde",
+      "name" : "role_esbz_team_teamv4_student",
+      "description" : "",
+      "composite" : false,
       "clientRole" : false,
       "containerId" : "esbz",
       "attributes" : { }
@@ -362,7 +386,7 @@
   "otpPolicyLookAheadWindow" : 1,
   "otpPolicyPeriod" : 30,
   "otpPolicyCodeReusable" : false,
-  "otpSupportedApplications" : [ "totpAppFreeOTPName", "totpAppMicrosoftAuthenticatorName", "totpAppGoogleName" ],
+  "otpSupportedApplications" : [ "totpAppMicrosoftAuthenticatorName", "totpAppGoogleName", "totpAppFreeOTPName" ],
   "webAuthnPolicyRpEntityName" : "keycloak",
   "webAuthnPolicySignatureAlgorithms" : [ "ES256" ],
   "webAuthnPolicyRpId" : "",
@@ -528,6 +552,17 @@
     "authenticationFlowBindingOverrides" : { },
     "fullScopeAllowed" : true,
     "nodeReRegistrationTimeout" : -1,
+    "protocolMappers" : [ {
+      "id" : "8ff72b36-dda9-4df0-86d7-c62d185287aa",
+      "name" : "BinDa Teacher Role Mapper",
+      "protocol" : "openid-connect",
+      "protocolMapper" : "oidc-role-name-mapper",
+      "consentRequired" : false,
+      "config" : {
+        "role" : "role_esbz_team_teamv4_teacher",
+        "new.role.name" : "role_binda_lehrer"
+      }
+    } ],
     "defaultClientScopes" : [ "web-origins", "acr", "profile", "roles", "email" ],
     "optionalClientScopes" : [ "address", "phone", "offline_access", "microprofile-jwt" ]
   }, {
@@ -1196,7 +1231,7 @@
       "subType" : "authenticated",
       "subComponents" : { },
       "config" : {
-        "allowed-protocol-mapper-types" : [ "saml-user-property-mapper", "saml-role-list-mapper", "saml-user-attribute-mapper", "oidc-address-mapper", "oidc-usermodel-property-mapper", "oidc-full-name-mapper", "oidc-sha256-pairwise-sub-mapper", "oidc-usermodel-attribute-mapper" ]
+        "allowed-protocol-mapper-types" : [ "saml-role-list-mapper", "oidc-sha256-pairwise-sub-mapper", "saml-user-attribute-mapper", "oidc-usermodel-property-mapper", "oidc-usermodel-attribute-mapper", "saml-user-property-mapper", "oidc-full-name-mapper", "oidc-address-mapper" ]
       }
     }, {
       "id" : "ad0e1f17-d708-42f7-903b-a389bf95b5e9",
@@ -1215,7 +1250,7 @@
       "subType" : "anonymous",
       "subComponents" : { },
       "config" : {
-        "allowed-protocol-mapper-types" : [ "oidc-sha256-pairwise-sub-mapper", "saml-user-property-mapper", "oidc-full-name-mapper", "oidc-address-mapper", "saml-user-attribute-mapper", "oidc-usermodel-property-mapper", "oidc-usermodel-attribute-mapper", "saml-role-list-mapper" ]
+        "allowed-protocol-mapper-types" : [ "oidc-full-name-mapper", "oidc-address-mapper", "saml-user-attribute-mapper", "saml-user-property-mapper", "oidc-sha256-pairwise-sub-mapper", "oidc-usermodel-property-mapper", "oidc-usermodel-attribute-mapper", "saml-role-list-mapper" ]
       }
     }, {
       "id" : "7b36936a-0383-4d10-9b29-d8e811856f6f",
