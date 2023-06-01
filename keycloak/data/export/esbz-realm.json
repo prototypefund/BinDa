@@ -271,6 +271,14 @@
         "attributes" : { }
       } ],
       "binda-ui_access" : [ {
+        "id" : "12329e54-1d3b-40c4-9a42-b29353ed655e",
+        "name" : "binda_admin",
+        "description" : "",
+        "composite" : false,
+        "clientRole" : true,
+        "containerId" : "0e3f0701-b813-44ae-a699-8653700c8aa0",
+        "attributes" : { }
+      }, {
         "id" : "fd979fbd-7e9c-4488-b256-1d70377833ef",
         "name" : "binda_teacher",
         "description" : "BinDa LuL Rolle",
