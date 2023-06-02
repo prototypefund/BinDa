@@ -31,34 +31,34 @@ docker-compose up -d
 
 ### testteacher01
 
-Username: testteacher01 
-Password: testteacher01
-Realm: esbz
-Client: binda-ui_access
-Roles:
- * role_binda_lehrer (Lehrer)
- * role_binda_verwaltung (Schulverwaltung)
- * role_binda_leitung (Schulleitung)
+* Username: `testteacher01` 
+* Password: `testteacher01`
+* Realm: `esbz`
+* Client: `binda-ui_access`
+* Roles:
+    * role_binda_lehrer (Lehrer)
+    * role_binda_verwaltung (Schulverwaltung)
+    * role_binda_leitung (Schulleitung)
 
-### Test Seki01 (`binda_admin`)
+### Test Seki01
 
-Username: testseki01 
-Password: testseki01
-keycloak_id: 9bcd753a-3e19-46ed-ae3a-a2beeb58a971
-Realm: esbz
-Client: binda-ui_access
-Roles:
- * `binda_admin` (Sekretariat)
+* Username: `testseki01` 
+* Password: `testseki01`
+* keycloak_id: `9bcd753a-3e19-46ed-ae3a-a2beeb58a971`
+* Realm: `esbz`
+* Client: `binda-ui_access`
+* Roles:
+    * `binda_admin` (Sekretariat)
 
-### Test User001 (`binda_admin`)
+### Test User001
 
-Username: testuser001 
-Password: testuser001
-keycloak_id: d26a3222-3c06-4d75-9f01-9b1c2a3d9e4f
-Realm: esbz
-Client: binda-ui_access
-Roles:
- * `binda_teacher` (Lehrer)
+* Username: `testuser001` 
+* Password: `testuser001`
+* keycloak_id: `d26a3222-3c06-4d75-9f01-9b1c2a3d9e4f`
+* Realm: `esbz`
+* Client: `binda-ui_access`
+* Roles:
+    * `binda_teacher` (Lehrer)
 
 ### JWT Token Example
 
