@@ -27,16 +27,38 @@ docker-compose up -d
 * BinDa API OpenAPI
   * http://127.0.0.1:8000/swagger/
 
-## Testuser 
+## Testusers
 
-Username: testteacher01 
-Password: testteacher01
-Realm: esbz
-Client: binda-ui_access
-Roles:
- * role_binda_lehrer (Lehrer)
- * role_binda_verwaltung (Schulverwaltung)
- * role_binda_leitung (Schulleitung)
+### testteacher01
+
+* Username: `testteacher01` 
+* Password: `testteacher01`
+* Realm: `esbz`
+* Client: `binda-ui_access`
+* Roles:
+    * role_binda_lehrer (Lehrer)
+    * role_binda_verwaltung (Schulverwaltung)
+    * role_binda_leitung (Schulleitung)
+
+### Test Seki01
+
+* Username: `testseki01` 
+* Password: `testseki01`
+* keycloak_id: `9bcd753a-3e19-46ed-ae3a-a2beeb58a971`
+* Realm: `esbz`
+* Client: `binda-ui_access`
+* Roles:
+    * `binda_admin` (Sekretariat)
+
+### Test User001
+
+* Username: `testuser001` 
+* Password: `testuser001`
+* keycloak_id: `d26a3222-3c06-4d75-9f01-9b1c2a3d9e4f`
+* Realm: `esbz`
+* Client: `binda-ui_access`
+* Roles:
+    * `binda_teacher` (Lehrer)
 
 ### JWT Token Example
 
@@ -81,3 +103,8 @@ Lehrer
   "email": "testteacher01@sus.esbz.berlin"
 }
 ```
+
+## API test
+
+Run `./test/run_tests.sh` to post test-data to the API as `binda_admin`, `test/tokens.txt` will be updated.
+Open `localhost:8000/swagger/` and use token from `token.txt`, or generate new token with `test/get_token.sh` (adapt accordingly).
