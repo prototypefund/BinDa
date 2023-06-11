@@ -79,6 +79,14 @@
       "containerId" : "esbz",
       "attributes" : { }
     }, {
+      "id" : "7cb5819e-5c27-4597-8440-941af6a1cea3",
+      "name" : "role_esbz_teacher",
+      "description" : "",
+      "composite" : false,
+      "clientRole" : false,
+      "containerId" : "esbz",
+      "attributes" : { }
+    }, {
       "id" : "0a0a1562-4ebb-47c3-acff-d32aa2d3c709",
       "name" : "default-roles-esbz",
       "description" : "${role_default-roles}",
@@ -95,6 +103,14 @@
     }, {
       "id" : "05dfd8cf-525f-40e3-80cb-c351506d2bde",
       "name" : "role_esbz_team_teamv4_student",
+      "description" : "",
+      "composite" : false,
+      "clientRole" : false,
+      "containerId" : "esbz",
+      "attributes" : { }
+    }, {
+      "id" : "fb7106bf-c28c-46f5-9545-be74057a4a54",
+      "name" : "role_esbz_admin",
       "description" : "",
       "composite" : false,
       "clientRole" : false,
@@ -271,17 +287,17 @@
         "attributes" : { }
       } ],
       "binda-ui_access" : [ {
-        "id" : "12329e54-1d3b-40c4-9a42-b29353ed655e",
-        "name" : "binda_admin",
+        "id" : "74f52f02-0701-4562-892a-aa66757f695a",
+        "name" : "role_binda_teacher",
         "description" : "",
         "composite" : false,
         "clientRole" : true,
         "containerId" : "0e3f0701-b813-44ae-a699-8653700c8aa0",
         "attributes" : { }
       }, {
-        "id" : "fd979fbd-7e9c-4488-b256-1d70377833ef",
-        "name" : "binda_teacher",
-        "description" : "BinDa LuL Rolle",
+        "id" : "127b3c36-c5b8-413e-8205-4fde4772fc23",
+        "name" : "role_binda_admin",
+        "description" : "",
         "composite" : false,
         "clientRole" : true,
         "containerId" : "0e3f0701-b813-44ae-a699-8653700c8aa0",
@@ -418,6 +434,9 @@
   "webAuthnPolicyPasswordlessAvoidSameAuthenticatorRegister" : false,
   "webAuthnPolicyPasswordlessAcceptableAaguids" : [ ],
   "scopeMappings" : [ {
+    "client" : "binda-ui_access",
+    "roles" : [ "role_esbz_teacher", "role_esbz_admin" ]
+  }, {
     "clientScope" : "offline_access",
     "roles" : [ "offline_access" ]
   } ],
@@ -534,12 +553,9 @@
     "baseUrl" : "http://localhost:9092",
     "surrogateAuthRequired" : false,
     "enabled" : true,
-    "alwaysDisplayInConsole" : false,
+    "alwaysDisplayInConsole" : true,
     "clientAuthenticatorType" : "client-secret",
-    "redirectUris" : [
-      "http://localhost:9092/*",
-      "http://localhost:3000/*"
-    ],
+    "redirectUris" : [ "http://localhost:3000/*", "http://localhost:9092/*" ],
     "webOrigins" : [ ],
     "notBefore" : 0,
     "bearerOnly" : false,
@@ -560,24 +576,48 @@
       "oidc.ciba.grant.enabled" : "false",
       "backchannel.logout.session.required" : "true",
       "client_credentials.use_refresh_token" : "false",
-      "tls.client.certificate.bound.access.tokens" : "false",
       "require.pushed.authorization.requests" : "false",
+      "tls.client.certificate.bound.access.tokens" : "false",
       "acr.loa.map" : "{}",
       "display.on.consent.screen" : "false",
       "token.response.type.bearer.lower-case" : "false"
     },
     "authenticationFlowBindingOverrides" : { },
-    "fullScopeAllowed" : true,
+    "fullScopeAllowed" : false,
     "nodeReRegistrationTimeout" : -1,
     "protocolMappers" : [ {
-      "id" : "8ff72b36-dda9-4df0-86d7-c62d185287aa",
-      "name" : "BinDa Teacher Role Mapper",
+      "id" : "942196d0-35c1-42c9-a688-7d9d8cae9ff9",
+      "name" : "BinDa Admin Role Mapper",
       "protocol" : "openid-connect",
       "protocolMapper" : "oidc-role-name-mapper",
       "consentRequired" : false,
       "config" : {
-        "role" : "role_esbz_team_teamv4_teacher",
+        "role" : "role_esbz_admin",
+        "new.role.name" : "role_binda_admin"
+      }
+    }, {
+      "id" : "004208b2-85be-4fc8-8668-35e939620701",
+      "name" : "binda Lehrer Role Mapper",
+      "protocol" : "openid-connect",
+      "protocolMapper" : "oidc-role-name-mapper",
+      "consentRequired" : false,
+      "config" : {
+        "role" : "role_esbz_lehrer",
         "new.role.name" : "role_binda_lehrer"
+      }
+    }, {
+      "id" : "5b5a34b4-9abf-4667-9c38-0c4da2950c71",
+      "name" : "BinDa Roles Token Claim",
+      "protocol" : "openid-connect",
+      "protocolMapper" : "oidc-usermodel-realm-role-mapper",
+      "consentRequired" : false,
+      "config" : {
+        "multivalued" : "true",
+        "userinfo.token.claim" : "true",
+        "id.token.claim" : "true",
+        "access.token.claim" : "true",
+        "claim.name" : "binda_roles",
+        "jsonType.label" : "String"
       }
     } ],
     "defaultClientScopes" : [ "web-origins", "acr", "profile", "roles", "email" ],
@@ -613,13 +653,14 @@
   }, {
     "id" : "efc43f71-9ee8-4cd2-a111-8b8fd487a8c8",
     "clientId" : "cloud.esbz.berlin",
-    "name" : "",
-    "description" : "",
+    "name" : "ESBZ nextCloud",
+    "description" : "OIDC Client für die ESBZ nextCloud",
     "rootUrl" : "https://cloud.esbz.berlin",
     "adminUrl" : "https://cloud.esbz.berlin",
+    "baseUrl" : "",
     "surrogateAuthRequired" : false,
     "enabled" : true,
-    "alwaysDisplayInConsole" : false,
+    "alwaysDisplayInConsole" : true,
     "clientAuthenticatorType" : "client-secret",
     "secret" : "i3fB11l2T1nFYNyZno2zlRJ54SqEvSUW",
     "redirectUris" : [ "https://cloud.esbz.berlin/*" ],
@@ -635,8 +676,8 @@
     "frontchannelLogout" : false,
     "protocol" : "openid-connect",
     "attributes" : {
-      "saml.multivalued.roles" : "false",
       "saml.force.post.binding" : "false",
+      "saml.multivalued.roles" : "false",
       "post.logout.redirect.uris" : "+",
       "oauth2.device.authorization.grant.enabled" : "false",
       "backchannel.logout.revoke.offline.tokens" : "false",
@@ -645,10 +686,10 @@
       "oidc.ciba.grant.enabled" : "false",
       "backchannel.logout.session.required" : "true",
       "client_credentials.use_refresh_token" : "false",
-      "saml.client.signature" : "false",
       "require.pushed.authorization.requests" : "false",
-      "saml.assertion.signature" : "false",
+      "saml.client.signature" : "false",
       "id.token.as.detached.signature" : "false",
+      "saml.assertion.signature" : "false",
       "client.secret.creation.time" : "1685649758",
       "saml.encrypt" : "false",
       "saml.server.signature" : "false",
@@ -722,11 +763,14 @@
   }, {
     "id" : "daa888a1-c822-422e-a955-20a76de35e1a",
     "clientId" : "esbz-forum",
-    "name" : "",
-    "description" : "",
+    "name" : "ESBZ Eltern Forum",
+    "description" : "OIDC Client des Discourse Eltern Forum",
+    "rootUrl" : "",
+    "adminUrl" : "",
+    "baseUrl" : "",
     "surrogateAuthRequired" : false,
     "enabled" : true,
-    "alwaysDisplayInConsole" : false,
+    "alwaysDisplayInConsole" : true,
     "clientAuthenticatorType" : "client-secret",
     "redirectUris" : [ ],
     "webOrigins" : [ ],
@@ -742,8 +786,10 @@
     "protocol" : "openid-connect",
     "attributes" : {
       "oidc.ciba.grant.enabled" : "false",
-      "oauth2.device.authorization.grant.enabled" : "false",
       "backchannel.logout.session.required" : "true",
+      "post.logout.redirect.uris" : "+",
+      "oauth2.device.authorization.grant.enabled" : "false",
+      "display.on.consent.screen" : "false",
       "backchannel.logout.revoke.offline.tokens" : "false"
     },
     "authenticationFlowBindingOverrides" : { },
@@ -1350,7 +1396,7 @@
       "subType" : "authenticated",
       "subComponents" : { },
       "config" : {
-        "allowed-protocol-mapper-types" : [ "oidc-usermodel-property-mapper", "oidc-full-name-mapper", "oidc-address-mapper", "saml-user-attribute-mapper", "saml-user-property-mapper", "oidc-sha256-pairwise-sub-mapper", "saml-role-list-mapper", "oidc-usermodel-attribute-mapper" ]
+        "allowed-protocol-mapper-types" : [ "saml-role-list-mapper", "oidc-full-name-mapper", "oidc-sha256-pairwise-sub-mapper", "saml-user-attribute-mapper", "oidc-usermodel-property-mapper", "oidc-address-mapper", "saml-user-property-mapper", "oidc-usermodel-attribute-mapper" ]
       }
     }, {
       "id" : "ad0e1f17-d708-42f7-903b-a389bf95b5e9",
@@ -1369,7 +1415,7 @@
       "subType" : "anonymous",
       "subComponents" : { },
       "config" : {
-        "allowed-protocol-mapper-types" : [ "saml-user-attribute-mapper", "oidc-address-mapper", "oidc-full-name-mapper", "oidc-sha256-pairwise-sub-mapper", "oidc-usermodel-property-mapper", "oidc-usermodel-attribute-mapper", "saml-role-list-mapper", "saml-user-property-mapper" ]
+        "allowed-protocol-mapper-types" : [ "oidc-address-mapper", "oidc-usermodel-attribute-mapper", "saml-user-property-mapper", "oidc-full-name-mapper", "oidc-sha256-pairwise-sub-mapper", "saml-user-attribute-mapper", "oidc-usermodel-property-mapper", "saml-role-list-mapper" ]
       }
     }, {
       "id" : "7b36936a-0383-4d10-9b29-d8e811856f6f",
