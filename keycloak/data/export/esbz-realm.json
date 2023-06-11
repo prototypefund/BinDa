@@ -536,7 +536,10 @@
     "enabled" : true,
     "alwaysDisplayInConsole" : false,
     "clientAuthenticatorType" : "client-secret",
-    "redirectUris" : [ "http://localhost:9092/*" ],
+    "redirectUris" : [
+      "http://localhost:9092/*",
+      "http://localhost:3000/*"
+    ],
     "webOrigins" : [ ],
     "notBefore" : 0,
     "bearerOnly" : false,
@@ -549,7 +552,7 @@
     "frontchannelLogout" : false,
     "protocol" : "openid-connect",
     "attributes" : {
-      "post.logout.redirect.uris" : "http://localhost:9092/*",
+      "post.logout.redirect.uris" : "http://localhost:9092/*##http://localhost:3000/*",
       "oauth2.device.authorization.grant.enabled" : "false",
       "backchannel.logout.revoke.offline.tokens" : "false",
       "use.refresh.tokens" : "true",
