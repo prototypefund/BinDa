@@ -17,6 +17,7 @@ services:
     image: postgres:15.3-alpine
     volumes:
       - binda_db2_data:/var/lib/postgresql/data
+      - ./db/binda_api:/opt/dump
     command: -c ssl=off
     restart: unless-stopped
     container_name: binda_db_api
