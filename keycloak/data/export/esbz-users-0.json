@@ -20,7 +20,7 @@
     } ],
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
-    "realmRoles" : [ "default-roles-esbz", "role_esbz_admin" ],
+    "realmRoles" : [ "role_esbz_user", "default-roles-esbz", "role_esbz_admin" ],
     "notBefore" : 0,
     "groups" : [ ]
   }, {
@@ -43,7 +43,7 @@
     } ],
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
-    "realmRoles" : [ "role_esbz_team_teamv4", "role_esbz_team_teamv4_teacher", "role_esbz_teacher", "default-roles-esbz" ],
+    "realmRoles" : [ "role_esbz_team_teamv4", "role_esbz_team_teamv4_teacher", "role_esbz_user", "role_esbz_teacher", "default-roles-esbz" ],
     "notBefore" : 0,
     "groups" : [ ]
   }, {
@@ -66,7 +66,7 @@
     } ],
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
-    "realmRoles" : [ "default-roles-esbz" ],
+    "realmRoles" : [ "role_esbz_user", "default-roles-esbz" ],
     "notBefore" : 0,
     "groups" : [ ]
   } ]

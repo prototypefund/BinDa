@@ -1,22 +1,22 @@
 {
   "realm" : "master",
   "users" : [ {
-    "id" : "ef40657e-7bba-44b5-b011-a6a8d14d1fb7",
-    "createdTimestamp" : 1686476523249,
+    "id" : "1e146d1b-1a15-42ae-9638-6896d7528f49",
+    "createdTimestamp" : 1686604580018,
     "username" : "admin",
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
     "credentials" : [ {
-      "id" : "487da99e-8c8f-4bd4-b18e-bb3f328e13d6",
+      "id" : "e4e27d67-3ab4-49d2-a626-800b50250a9f",
       "type" : "password",
-      "createdDate" : 1686476523341,
-      "secretData" : "{\"value\":\"BCzEnuqj9KXOzZcckrYc8b7tJgq2rf49Cg5dJHk17ao=\",\"salt\":\"5YeDxYCu7IONn+mNego7Kw==\",\"additionalParameters\":{}}",
+      "createdDate" : 1686604580089,
+      "secretData" : "{\"value\":\"rIYNVsPVnVjkxYpqjzl5QycYn4rZds/ONoT8gDWVPmM=\",\"salt\":\"chcpkQ3JU5QOO2LAj941og==\",\"additionalParameters\":{}}",
       "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
     } ],
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
-    "realmRoles" : [ "admin", "default-roles-master" ],
+    "realmRoles" : [ "default-roles-master", "admin" ],
     "notBefore" : 0,
     "groups" : [ ]
   } ]
