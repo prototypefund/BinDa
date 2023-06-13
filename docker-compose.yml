@@ -93,6 +93,7 @@ services:
     restart: unless-stopped
     env_file:
       - ./keycloak/postgres-api.env
+      - ./.env
     ports:
       - "8000:8000"
     networks:
