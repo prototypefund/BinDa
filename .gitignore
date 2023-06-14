@@ -1,4 +1,4 @@
 .idea
-/.env
-/.env.*
-!/.env.sample
+.env
+.env.*
+!.env.sample
