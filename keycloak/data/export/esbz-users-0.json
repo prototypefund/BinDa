@@ -47,6 +47,98 @@
     "notBefore" : 0,
     "groups" : [ ]
   }, {
+    "id" : "10e2e040-c8e6-4049-9589-a7956acb4b40",
+    "createdTimestamp" : 1684748062631,
+    "username" : "testteacher02",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "",
+    "lastName" : "",
+    "email" : "testteacher02@sus.esbz.berlin",
+    "credentials" : [ {
+      "id" : "10eb75bd-acae-4094-8a77-289ccced6b7a",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1686837285337,
+      "secretData" : "{\"value\":\"V7HcMBwtdZ0mkQIPPTfUvthK4uafKSa223DHdnR79nc=\",\"salt\":\"WaKlByADlsWmtow/qIgQjg==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "role_esbz_team_teamv4", "role_esbz_team_teamv4_teacher", "role_esbz_user", "role_esbz_teacher", "default-roles-esbz" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "2179f770-e6ae-4eb9-a268-f11efec1d735",
+    "createdTimestamp" : 1684748062631,
+    "username" : "testteacher03",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "",
+    "lastName" : "",
+    "email" : "testteacher03@sus.esbz.berlin",
+    "credentials" : [ {
+      "id" : "83c97fe6-a693-4e73-b8f7-3aade62d68b6",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1686837302110,
+      "secretData" : "{\"value\":\"ovf/e+AFvaWqGhxd5G+if9VqujpVqi6c1m9IuDqdtMI=\",\"salt\":\"qVsLlgOMG2xFyVniD5vi0g==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "role_esbz_team_teamv4", "role_esbz_team_teamv4_teacher", "role_esbz_user", "role_esbz_teacher", "default-roles-esbz" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "32a60644-1933-49b2-a713-cf48b4ea3c20",
+    "createdTimestamp" : 1684748062631,
+    "username" : "testteacher04",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "",
+    "lastName" : "",
+    "email" : "testteacher04@sus.esbz.berlin",
+    "credentials" : [ {
+      "id" : "8bcae1c5-65cd-4d12-bfce-ff80eb0cccc6",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1686837321460,
+      "secretData" : "{\"value\":\"J+h0Rvhk12GukonQ6tiYS8QtckATV3nzA6+K8vhhM8k=\",\"salt\":\"qq8oauglpQGPwB/fAKQnFA==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "role_esbz_team_teamv4", "role_esbz_team_teamv4_teacher", "role_esbz_user", "role_esbz_teacher", "default-roles-esbz" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "510c1dd7-8816-484c-b598-19a6cc973069",
+    "createdTimestamp" : 1684748062631,
+    "username" : "testteacher05",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : true,
+    "firstName" : "",
+    "lastName" : "",
+    "email" : "testteacher05@sus.esbz.berlin",
+    "credentials" : [ {
+      "id" : "84d4ba99-f3d8-4a44-98d6-a931999fa10f",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1686837336093,
+      "secretData" : "{\"value\":\"1ciEQrvHC1FAvgkcjIoIF7ZL/F2kiCz8LH9RoGiLejk=\",\"salt\":\"MTOPZA8BASErkOFCf96ysw==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "role_esbz_team_teamv4", "role_esbz_team_teamv4_teacher", "role_esbz_user", "role_esbz_teacher", "default-roles-esbz" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
     "id" : "d26a3222-3c06-4d75-9f01-9b1c2a3d9e4f",
     "createdTimestamp" : 1676065230763,
     "username" : "testuser001",
