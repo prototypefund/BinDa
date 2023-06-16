@@ -8,11 +8,13 @@ echo ""
 echo "================================================================"
 echo "======================== BinDa Reloaded ========================"
 echo "================================================================"
+
 }
+
 
 $DOCKER compose down
 $DOCKER volume rm cyber4edu-dev-binda_binda_db1_data
 $DOCKER volume rm cyber4edu-dev-binda_binda_db2_data
-$DOCKER compose build
 $DOCKER compose -f docker-compose.yml -f docker-compose.prev.yml up & loadData
+
 
