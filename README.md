@@ -3,11 +3,8 @@
 ## Local Setup 
 
 ```shell
-git clone git@gitlab.com:cyber4EDU/cyber4edu-dev-binda.git
+git clone --recursive --branch dev git@gitlab.com:cyber4EDU/cyber4edu-dev-binda.git
 cd cyber4edu-dev-binda
-git switch dev
-git submodule init
-git submodule update 
 
 
 cd cyber4dev-binda-api
