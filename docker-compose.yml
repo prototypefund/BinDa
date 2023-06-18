@@ -98,6 +98,20 @@ services:
     networks:
       - binda_network
 
+  webui:
+    build: ./cyber4dev-binda-webui
+    image: binda_ui:latest
+    container_name: binda_ui
+    depends_on:
+      - api
+    restart: unless-stopped
+    env_file:
+      - ./keycloak/postgres-ui.env
+    ports:
+      - "3000:3000"
+    networks:
+      - binda_network
+
 networks:
   binda_network:
 
