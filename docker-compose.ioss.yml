@@ -9,3 +9,6 @@ services:
     env_file:
       - ./keycloak/postgres-api.env
       - ./.env
+  webui:
+    profiles:
+      - "dontbuild"
