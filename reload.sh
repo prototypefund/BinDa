@@ -15,6 +15,6 @@ echo "================================================================"
 $DOCKER compose down
 $DOCKER volume rm cyber4edu-dev-binda_binda_db1_data
 $DOCKER volume rm cyber4edu-dev-binda_binda_db2_data
-$DOCKER compose -f docker-compose.yml -f docker-compose.prev.yml up & loadData
+$DOCKER compose -f docker-compose.yml -f docker-compose.ioss.yml up & loadData
 
 
