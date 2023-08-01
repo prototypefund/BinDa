@@ -28,9 +28,9 @@
   "oauth2DeviceCodeLifespan" : 600,
   "oauth2DevicePollingInterval" : 5,
   "enabled" : true,
-  "sslRequired" : "NONE",
+  "sslRequired" : "none",
   "registrationAllowed" : true,
-  "registrationEmailAsUsername" : false,
+  "registrationEmailAsUsername" : true,
   "rememberMe" : true,
   "verifyEmail" : true,
   "loginWithEmailAllowed" : true,
@@ -428,7 +428,7 @@
   "otpPolicyLookAheadWindow" : 1,
   "otpPolicyPeriod" : 30,
   "otpPolicyCodeReusable" : false,
-  "otpSupportedApplications" : [ "totpAppFreeOTPName", "totpAppMicrosoftAuthenticatorName", "totpAppGoogleName" ],
+  "otpSupportedApplications" : [ "totpAppMicrosoftAuthenticatorName", "totpAppGoogleName", "totpAppFreeOTPName" ],
   "webAuthnPolicyRpEntityName" : "keycloak",
   "webAuthnPolicySignatureAlgorithms" : [ "ES256" ],
   "webAuthnPolicyRpId" : "",
@@ -571,6 +571,7 @@
     "enabled" : true,
     "alwaysDisplayInConsole" : true,
     "clientAuthenticatorType" : "client-secret",
+    "secret" : "zpLfQrWxWEknlpPEaxdF6scPDw3nEvOU",
     "redirectUris" : [ "http://localhost:3000/*", "http://localhost:9092/*" ],
     "webOrigins" : [ ],
     "notBefore" : 0,
@@ -580,10 +581,11 @@
     "implicitFlowEnabled" : false,
     "directAccessGrantsEnabled" : true,
     "serviceAccountsEnabled" : false,
-    "publicClient" : true,
+    "publicClient" : false,
     "frontchannelLogout" : false,
     "protocol" : "openid-connect",
     "attributes" : {
+      "client.secret.creation.time" : "1690926254",
       "post.logout.redirect.uris" : "http://localhost:9092/*##http://localhost:3000/*",
       "oauth2.device.authorization.grant.enabled" : "false",
       "backchannel.logout.revoke.offline.tokens" : "false",
@@ -592,9 +594,9 @@
       "oidc.ciba.grant.enabled" : "false",
       "backchannel.logout.session.required" : "true",
       "client_credentials.use_refresh_token" : "false",
+      "acr.loa.map" : "{}",
       "require.pushed.authorization.requests" : "false",
       "tls.client.certificate.bound.access.tokens" : "false",
-      "acr.loa.map" : "{}",
       "display.on.consent.screen" : "false",
       "token.response.type.bearer.lower-case" : "false"
     },
@@ -1422,7 +1424,7 @@
       "subType" : "authenticated",
       "subComponents" : { },
       "config" : {
-        "allowed-protocol-mapper-types" : [ "oidc-full-name-mapper", "oidc-usermodel-attribute-mapper", "saml-user-attribute-mapper", "saml-user-property-mapper", "saml-role-list-mapper", "oidc-address-mapper", "oidc-usermodel-property-mapper", "oidc-sha256-pairwise-sub-mapper" ]
+        "allowed-protocol-mapper-types" : [ "oidc-usermodel-attribute-mapper", "saml-role-list-mapper", "oidc-usermodel-property-mapper", "oidc-full-name-mapper", "saml-user-attribute-mapper", "oidc-sha256-pairwise-sub-mapper", "saml-user-property-mapper", "oidc-address-mapper" ]
       }
     }, {
       "id" : "ad0e1f17-d708-42f7-903b-a389bf95b5e9",
@@ -1441,7 +1443,7 @@
       "subType" : "anonymous",
       "subComponents" : { },
       "config" : {
-        "allowed-protocol-mapper-types" : [ "saml-user-property-mapper", "oidc-sha256-pairwise-sub-mapper", "oidc-usermodel-property-mapper", "oidc-full-name-mapper", "oidc-address-mapper", "saml-user-attribute-mapper", "oidc-usermodel-attribute-mapper", "saml-role-list-mapper" ]
+        "allowed-protocol-mapper-types" : [ "saml-user-property-mapper", "oidc-sha256-pairwise-sub-mapper", "oidc-full-name-mapper", "oidc-address-mapper", "oidc-usermodel-property-mapper", "saml-role-list-mapper", "saml-user-attribute-mapper", "oidc-usermodel-attribute-mapper" ]
       }
     }, {
       "id" : "7b36936a-0383-4d10-9b29-d8e811856f6f",
@@ -1452,7 +1454,7 @@
       "config" : { }
     } ],
     "org.keycloak.userprofile.UserProfileProvider" : [ {
-      "id" : "eeb9ec15-6e98-45ef-a88a-686bc71b9692",
+      "id" : "8fe84fd1-762c-41c3-b181-4e842f5daf27",
       "providerId" : "declarative-user-profile",
       "subComponents" : { },
       "config" : { }
@@ -2093,17 +2095,19 @@
   "dockerAuthenticationFlow" : "docker auth",
   "attributes" : {
     "cibaBackchannelTokenDeliveryMode" : "poll",
-    "cibaExpiresIn" : "120",
     "cibaAuthRequestedUserHint" : "login_hint",
-    "oauth2DeviceCodeLifespan" : "600",
-    "clientOfflineSessionMaxLifespan" : "0",
     "oauth2DevicePollingInterval" : "5",
+    "clientOfflineSessionMaxLifespan" : "0",
     "clientSessionIdleTimeout" : "0",
-    "parRequestUriLifespan" : "60",
-    "clientSessionMaxLifespan" : "0",
     "clientOfflineSessionIdleTimeout" : "0",
     "cibaInterval" : "5",
-    "realmReusableOtpCode" : "false"
+    "realmReusableOtpCode" : "false",
+    "cibaExpiresIn" : "120",
+    "oauth2DeviceCodeLifespan" : "600",
+    "parRequestUriLifespan" : "60",
+    "clientSessionMaxLifespan" : "0",
+    "frontendUrl" : "",
+    "acr.loa.map" : "{}"
   },
   "keycloakVersion" : "21.1.1",
   "userManagedAccessAllowed" : true,
