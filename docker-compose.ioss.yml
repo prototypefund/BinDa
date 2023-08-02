@@ -10,5 +10,8 @@ services:
       - ./keycloak/postgres-api.env
       - ./.env
   webui:
-    profiles:
-      - "dontbuild"
+    env_file:
+      - ./keycloak/postgres-ui.env
+      - ./.env
+#    profiles:
+#      - "dontbuild"
