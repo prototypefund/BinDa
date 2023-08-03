@@ -9,11 +9,10 @@ else
   DUMPFILE="dump-small.sql.gz"
 fi
 
+echo "clean up database"
 ${DOCKER} exec -it binda_db_api /bin/bash -c 'zcat /opt/dump/clean.sql | psql -U $POSTGRES_USER'
 
-echo "used dump file: $(DUMPFILE)"
-cp "./db/binda_api/${DUMPFILE}" './db/binda_api/dump.sql.gz'
-${DOCKER} exec -it binda_db_api /bin/bash -c 'zcat /opt/dump/dump.sql.gz | psql -U $POSTGRES_USER'
-rm './db/binda_api/dump.sql.gz'
+echo "used dump file: ${DUMPFILE}"
+${DOCKER} exec -it binda_db_api /bin/bash -c "zcat /opt/dump/${DUMPFILE} | psql -U \$POSTGRES_USER"
 
 exit 0
