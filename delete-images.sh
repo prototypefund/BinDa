@@ -6,9 +6,9 @@ function delete_image () {
   IMAGE_KEY=$1
   if [[ ! -z "${IMAGE_KEY}" ]]; then
     if [[ "${IMAGE_KEY}" == "API" ]]; then
-      IMAGE_NAME="binda_ui"
-    elif [[ "${IMAGE_KEY}" == "UI" ]]; then
       IMAGE_NAME="binda_api"
+    elif [[ "${IMAGE_KEY}" == "UI" ]]; then
+      IMAGE_NAME="binda_ui"
     fi
 
     if [[ ! -z "${IMAGE_NAME}" ]]; then
