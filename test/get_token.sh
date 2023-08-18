@@ -16,7 +16,7 @@ get_token() {
         --data-urlencode "client_secret=${CLIENT_SECRET}"
 }
 
-CLIENT_SECRET=">Hs8wkP14XzKAj63GpYlKSt529rAsSl83"
+CLIENT_SECRET="zpLfQrWxWEknlpPEaxdF6scPDw3nEvOU"
 
 for username in \
     "testuser001"\
