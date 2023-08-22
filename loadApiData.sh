@@ -10,7 +10,7 @@ else
 fi
 
 echo "clean up database"
-${DOCKER} exec -it binda_db_api /bin/bash -c 'zcat /opt/dump/clean.sql | psql -U $POSTGRES_USER'
+${DOCKER} exec -it binda_db_api /bin/bash -c 'cat /opt/dump/clean.sql | psql -U $POSTGRES_USER'
 
 echo "used dump file: ${DUMPFILE}"
 ${DOCKER} exec -it binda_db_api /bin/bash -c "zcat /opt/dump/${DUMPFILE} | psql -U \$POSTGRES_USER"
