@@ -1,3 +1,4 @@
+delete from physical_ids;
 delete from check_in_out;
 delete from absents;
 
