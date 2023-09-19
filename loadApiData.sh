@@ -3,7 +3,9 @@ SELECT=$1
 
 DOCKER=$(which docker)
 
-if [[ "${SELECT}" == "big" ]]; then
+if [[ "${SELECT}" == "bigs" ]]; then
+  DUMPFILE="dump-big-seki.sql.gz"
+elif [[ "${SELECT}" == "big" ]]; then
   DUMPFILE="dump-big.sql.gz"
 else
   DUMPFILE="dump-small.sql.gz"
